@@ -1,0 +1,12 @@
+---
+# MAS ~> hosts inventory 
+
+- hosts: all
+  roles:
+  - role: common
+
+- hosts: pegasus 
+  roles:
+  - role: develop
+
+
