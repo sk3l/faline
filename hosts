@@ -5,3 +5,6 @@ localhost   ansible_connection=local
 
 [pegasus]
 localhost   ansible_connection=local
+
+[centaur]
+localhost   ansible_connection=local

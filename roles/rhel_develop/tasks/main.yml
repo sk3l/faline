@@ -1,0 +1,32 @@
+---
+# 
+ # Install SCL repo 
+- name: Install SCL repo 
+  yum:
+    name: centos-release-scl 
+ 
+ # Install EPEL release repo 
+- name: Install EPEL repo 
+  yum:
+    name: epel-release 
+      
+# Install development utilities
+- name: Install development tools
+  yum:
+    name:
+      - cmake3
+      - devtoolset-7-gcc-c++     
+      - devtoolset-7-gdb
+      - llvm-toolset-7-clang 
+      - llvm-toolset-7-clang-tools-extra
+      - python36
+      - python36-pip
+      - python36-setuptools
+      - rh-git29-git 
+  state: present
+
+  #- name: Upgrade all packages
+  #  yum:
+  #  name: '*'
+  #  state: latest
+
