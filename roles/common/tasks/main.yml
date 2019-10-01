@@ -4,6 +4,10 @@
 - name: Create main user
   user: name=mskelton password=abc123 comment="Michael A. Skelton"
 
+- name: Setup user's rc files
+  git:
+    repo: git@github.com:sk3l/movein.git
+    dest: /home/mylogin/.local/tmp/movein
 #- name: Create the hosts file for all machines
 #  template: src=hosts.j2 dest=/etc/hosts
 #
