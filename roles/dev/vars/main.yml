@@ -1,0 +1,7 @@
+---
+# The variables file used by the playbooks in the dev role.
+# These don't have to be explicitly imported by vars_files: they are autopopulated.
+
+devusername: mskelton 
+devusercomment: "Michael A. Skelton"
+devuserpwd: "abc123"

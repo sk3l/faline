@@ -1,17 +1,7 @@
 ---
-#
- # Install SCL repo
-- name: Install SCL repo
-  yum:
-    name: centos-release-scl
 
- # Install EPEL release repo
-- name: Install EPEL repo
-  yum:
-    name: epel-release
-
-# Install development utilities
-- name: Install development tools
+# Install Red Hat development utilities
+- name: Install RHEL development tools
   yum:
     name:
       - cmake3
@@ -23,10 +13,11 @@
       - python36-pip
       - python36-setuptools
       - rh-git29-git
-  state: present
+  state: installed 
 
-  #- name: Upgrade all packages
-  #  yum:
-  #  name: '*'
-  #  state: latest
-
+# Need to activate SCL Git
+#
+- name: Activate SCL Git for all sessions 
+  lineinfile:
+    path: /etc/profile 
+    line: source /opt/rh/rh-git29/enable 

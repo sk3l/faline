@@ -1,0 +1,17 @@
+---
+#
+ # Install SCL repo
+- name: Install SCL repo
+  yum:
+    name: centos-release-scl
+
+ # Install EPEL release repo
+- name: Install EPEL repo
+  yum:
+    name: epel-release
+
+  #- name: Upgrade all packages
+  #  yum:
+  #  name: '*'
+  #  state: latest
+

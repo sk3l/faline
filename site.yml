@@ -1,15 +1,17 @@
 ---
 # MAS ~> hosts inventory
 
-- hosts: all
-  roles:
-  - role: common
+#- hosts: all
+#  roles:
+#  - role: common
 
 - hosts: pegasus
   roles:
-  - role: red_hat_dev
+  - role: red_hat
 
 - hosts: centaur
   roles:
+  - role: red_hat_common
   - role: red_hat_dev
+  - role: dev
 
